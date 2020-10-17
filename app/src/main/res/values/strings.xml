@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">Sy_Claudio</string>
+
+    <!--    Screen 1 Strings   -->
+    <string name="search_prompt">Search:</string>
+    <string name="input"></string>
+    <string name="hint">Enter text.</string>
+    <string name="search_button">Search</string>
+
+    <!--    Screen 2 Strings   -->
+    <string name="message"></string>
+
+    <!--    Screen 3 Strings   -->
+
 </resources>
