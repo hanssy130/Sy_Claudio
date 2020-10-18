@@ -12,6 +12,8 @@ import android.widget.Toast;
 
 import com.google.gson.Gson;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
 public class ResultTitlesActivity extends AppCompatActivity {
@@ -29,6 +31,13 @@ public class ResultTitlesActivity extends AppCompatActivity {
         Intent intent = getIntent();
         String searchInput = intent.getStringExtra("input");
         System.out.println(searchInput);
+
+        // Date code from https://stackoverflow.com/questions/11272431/get-date-of-past-7days-from-current-in-android
+        final LocalDate date = LocalDate.now();
+        final LocalDate dateMinus7Days = date.minusDays(7);
+        final String formattedDate = dateMinus7Days.format(DateTimeFormatter.ISO_LOCAL_DATE);
+        SERVICE_URL = "https://newsapi.org/v2/everything?q=" + searchInput + "&from=" + formattedDate + "&sortBy=publishedAt&apiKey=053d3857d0c44256b466b2e494de3d96";
+        System.out.println(SERVICE_URL);
 
         resultsList = new ArrayList<Results>();
         lv = findViewById(R.id.resultList);
