@@ -4,6 +4,7 @@ package ca.bcit.sy_claudio;
 
         import android.content.Intent;
         import android.os.Bundle;
+        import android.widget.ImageView;
         import android.widget.TextView;
 
 public class ResultDataActivity extends AppCompatActivity {
@@ -19,8 +20,26 @@ public class ResultDataActivity extends AppCompatActivity {
         String description = intent.getStringExtra("description");
         String url = intent.getStringExtra("url");
         String urltoimage = intent.getStringExtra("urltoimage");
-        String publishedat = intent.getStringExtra("publishedat");
+        String publishedate = intent.getStringExtra("publishedat");
         String content = intent.getStringExtra("content");
         System.out.println(intent);
+
+        TextView tvSource = findViewById(R.id.source);
+        TextView tvAuthor = findViewById(R.id.author);
+        TextView tvTitle = findViewById(R.id.title);
+        TextView tvDescription = findViewById(R.id.description);
+        TextView tvUrl = findViewById(R.id.url);
+        ImageView imageThumbnail = findViewById(R.id.smallThumbnail);
+        TextView tvPublishedAt = findViewById(R.id.publishedAt);
+        TextView tvContent = findViewById(R.id.content);
+
+        tvAuthor.setText(author);
+        tvTitle.setText(title);
+        tvDescription.setText(description);
+        tvUrl.setText(url);
+        tvPublishedAt.setText(publishedate);
+        tvContent.setText(content);
+
+
     }
 }
