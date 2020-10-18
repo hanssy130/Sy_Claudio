@@ -22,7 +22,6 @@ public class ResultDataActivity extends AppCompatActivity {
         String urltoimage = intent.getStringExtra("urltoimage");
         String publishedate = intent.getStringExtra("publishedat");
         String content = intent.getStringExtra("content");
-        System.out.println(intent);
 
         TextView tvSource = findViewById(R.id.source);
         TextView tvAuthor = findViewById(R.id.author);
@@ -33,7 +32,7 @@ public class ResultDataActivity extends AppCompatActivity {
         TextView tvPublishedAt = findViewById(R.id.publishedAt);
         TextView tvContent = findViewById(R.id.content);
 
-        tvAuthor.setText(author);
+        tvAuthor.setText("by " + author);
         tvTitle.setText(title);
         tvDescription.setText(description);
         tvUrl.setText(url);
