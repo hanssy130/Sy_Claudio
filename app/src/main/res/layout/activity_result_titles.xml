@@ -4,15 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".ResultTitlesActivity">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/message" />
-
     <ListView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:id="@+id/resultList"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/search_results" />
 
 </LinearLayout>

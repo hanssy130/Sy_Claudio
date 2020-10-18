@@ -9,6 +9,9 @@
 
     <!--    Screen 2 Strings   -->
     <string name="message"></string>
+    <string-array name="search_results">
+        <item>Example Search Result.</item>
+    </string-array>
 
     <!--    Screen 3 Strings   -->
 
