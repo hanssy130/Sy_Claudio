@@ -9,6 +9,8 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
+import org.json.JSONObject;
+
 import java.util.ArrayList;
 
 public class ResultsAdapter extends ArrayAdapter<Results> {
@@ -40,6 +42,8 @@ public class ResultsAdapter extends ArrayAdapter<Results> {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(view.getContext(), ResultDataActivity.class);
+
+                intent.putExtra("source", result.getSource().getName());
                 intent.putExtra("author", result.getAuthor());
                 intent.putExtra("title", result.getTitle());
                 intent.putExtra("description", result.getDescription());

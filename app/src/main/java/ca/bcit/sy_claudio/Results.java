@@ -3,7 +3,27 @@ package ca.bcit.sy_claudio;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import org.json.JSONObject;
+
 public class Results {
+    public class Source {
+        @SerializedName("name")
+        @Expose
+        private String name;
+        public String getName() {return name;}
+        public void setName(String name) {this.name = name;}
+    }
+
+    @SerializedName("source")
+    @Expose
+    private Source source;
+    public Source getSource() {
+        return source;
+    }
+    public void setSource(Source source) {
+        this.source = source;
+    }
+
     @SerializedName("description")
     @Expose
     private String description;
