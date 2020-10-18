@@ -13,7 +13,7 @@ import java.util.ArrayList;
 public class ResultsAdapter extends ArrayAdapter<Results> {
     Context _context;
     public ResultsAdapter(Context context, ArrayList<Results> results) {
-        super(context, 0, results);
+        super(context, android.R.layout.simple_list_item_1, results);
         _context = context;
     }
 
@@ -28,13 +28,13 @@ public class ResultsAdapter extends ArrayAdapter<Results> {
         }
 
         // Lookup view for data population
-        TextView tvId = convertView.findViewById(R.id.id);
-        TextView tvAuthor = convertView.findViewById(R.id.author);
+//        TextView tvId = convertView.findViewById(R.id.id);
+//        TextView tvAuthor = convertView.findViewById(R.id.author);
         TextView tvTitle = convertView.findViewById(R.id.title);
 
         // Populate the data into the template view using the data object
-        tvId.setText(result.getId());
-        tvAuthor.setText(result.getAuthor());
+//        tvId.setText(result.getId());
+//        tvAuthor.setText(result.getAuthor());
         tvTitle.setText(result.getTitle());
 
         // Return the completed view to render on screen

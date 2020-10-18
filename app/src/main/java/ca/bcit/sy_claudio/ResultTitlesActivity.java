@@ -18,7 +18,7 @@ public class ResultTitlesActivity extends AppCompatActivity {
     private String TAG = ResultTitlesActivity.class.getSimpleName();
     private ListView lv;
     // URL to get contacts JSON
-    private static String SERVICE_URL = "https://newsapi.org/v2/everything?q=bitcoin&from=2020-10-12&sortBy=publishedAt&apiKey=053d3857d0c44256b466b2e494de3d96";
+    private static String SERVICE_URL = "https://newsapi.org/v2/everything?q=yeet&from=2020-10-12&sortBy=publishedAt&apiKey=053d3857d0c44256b466b2e494de3d96";
     private ArrayList<Results> resultsList;
 
     @Override
@@ -58,7 +58,7 @@ public class ResultTitlesActivity extends AppCompatActivity {
                 Log.d(TAG, "Json: " + jsonStr);
                 // this step is needed to wrap the JSON array inside
                 // a JSON object that looks like this {"toons": .... }
-                jsonStr = "{\"results\":" + jsonStr + "}";
+//                jsonStr = "{\"results\":" + jsonStr + "}";
                 Gson gson = new Gson();
                 BaseResults baseResults = gson.fromJson(jsonStr, BaseResults.class);
                 resultsList = baseResults.getResults();
