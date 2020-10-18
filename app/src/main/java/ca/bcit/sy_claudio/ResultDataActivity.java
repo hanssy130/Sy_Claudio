@@ -15,6 +15,8 @@ public class ResultDataActivity extends AppCompatActivity {
         setContentView(R.layout.activity_result_data);
 
         Intent intent = getIntent();
+        String source = intent.getStringExtra("source");
+        System.out.println("Source foudn! " + source);
         String author = intent.getStringExtra("author");
         String title = intent.getStringExtra("title");
         String description = intent.getStringExtra("description");
