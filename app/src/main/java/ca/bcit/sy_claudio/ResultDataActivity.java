@@ -31,6 +31,9 @@ public class ResultDataActivity extends AppCompatActivity {
         TextView tvDescription = findViewById(R.id.description);
         TextView tvUrl = findViewById(R.id.url);
         ImageView imageThumbnail = findViewById(R.id.smallThumbnail);
+        if (urltoimage != null) {
+            new ImageDownloaderTask(imageThumbnail).execute(urltoimage);
+        }
         TextView tvPublishedAt = findViewById(R.id.publishedAt);
         TextView tvContent = findViewById(R.id.content);
 
@@ -40,7 +43,5 @@ public class ResultDataActivity extends AppCompatActivity {
         tvUrl.setText(url);
         tvPublishedAt.setText(publishedate);
         tvContent.setText(content);
-
-
     }
 }
