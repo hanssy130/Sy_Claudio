@@ -12,6 +12,7 @@
 
     <!--    Screen 2 Strings   -->
     <string name="message"></string>
+    <string name="search_response">Search Results:</string>
     <string-array name="search_results">
         <item>Loading Search Results...</item>
     </string-array>
