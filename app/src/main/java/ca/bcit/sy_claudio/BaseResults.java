@@ -6,7 +6,7 @@ import com.google.gson.annotations.SerializedName;
 import java.util.ArrayList;
 
 public class BaseResults {
-    @SerializedName("results")
+    @SerializedName("articles")
     @Expose
     private ArrayList<Results> results = new ArrayList<>();
     public ArrayList<Results> getResults() {
