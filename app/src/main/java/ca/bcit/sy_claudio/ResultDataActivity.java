@@ -19,7 +19,6 @@ public class ResultDataActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         String source = intent.getStringExtra("source");
-        System.out.println("Source foudn! " + source);
         String author = intent.getStringExtra("author");
         String title = intent.getStringExtra("title");
         String description = intent.getStringExtra("description");
@@ -41,10 +40,10 @@ public class ResultDataActivity extends AppCompatActivity {
         TextView tvContent = findViewById(R.id.content);
 
         tvAuthor.setText("by " + author);
-        tvTitle.setText(title);
+        tvTitle.setText("\uD83D\uDD25\uD83D\uDCAF\uD83D\uDE2E " + title +" \uD83D\uDE2E\uD83D\uDCAF\uD83D\uDD25");
         tvDescription.setText(description);
         tvUrl.setText(url);
-        tvPublishedAt.setText(publishedate);
+        tvPublishedAt.setText("Published at " + publishedate);
         tvContent.setText(content);
     }
 }

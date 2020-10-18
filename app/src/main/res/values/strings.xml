@@ -2,10 +2,13 @@
     <string name="app_name">Sy_Claudio</string>
 
     <!--    Screen 1 Strings   -->
-    <string name="search_prompt">Search:</string>
+    <string name="search_prompt">Search for the latest news articles:</string>
     <string name="input"></string>
-    <string name="hint">Enter text.</string>
+    <string name="hint">Enter keywords (e.g. "cats", "good grades")</string>
     <string name="search_button">Search</string>
+    <string name="about">About Us</string>
+    <string name="about_info">This app was published by Hans Sy and Kent Claudio on October 18, 2020. We are students that attend the most prestigious school, BCIT!</string>
+
 
     <!--    Screen 2 Strings   -->
     <string name="message"></string>

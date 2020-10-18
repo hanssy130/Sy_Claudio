@@ -11,36 +11,53 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical" >
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:orientation="vertical">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="286dp"
-        android:padding="50dp"
-        app:srcCompat="@drawable/logo" />
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="268dp"
+            android:layout_height="186dp"
+            android:padding="50dp"
+            app:srcCompat="@drawable/logo" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/search_prompt"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:padding="5dp" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="@string/search_prompt"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
-    <EditText
-        android:id="@+id/inputtext"
-        android:text="@string/input"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/hint"
-        />
+        <EditText
+            android:id="@+id/inputtext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/hint"
+            android:text="@string/input" />
 
-    <Button
-        android:id="@+id/search"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/search_button"
-        android:onClick="search" />
+        <Button
+            android:id="@+id/search"
+            android:layout_width="183dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="15dp"
+            android:onClick="search"
+            android:shadowDx="50"
+            android:shadowDy="50"
+            android:shadowRadius="50"
+            android:text="@string/search_button" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="183dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="15dp"
+            android:shadowDx="50"
+            android:shadowDy="50"
+            android:shadowRadius="50"
+            android:text="@string/about"
+            android:onClick="showToast"
+            />
     </LinearLayout>
 </ScrollView>
