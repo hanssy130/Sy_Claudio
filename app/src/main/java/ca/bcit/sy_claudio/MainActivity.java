@@ -23,6 +23,11 @@ public class MainActivity extends AppCompatActivity {
         input = findViewById(R.id.inputtext);
     }
 
+    /**
+     * Ensure user has input a keyword.
+     *
+     * @param view the view utilized
+     */
     public void search(View view) {
         String toSearch = input.getText().toString();
         if (TextUtils.isEmpty(toSearch)) {
@@ -34,6 +39,11 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Shows a toast with information about the app developers.
+     *
+     * @param view the view utilized
+     */
     public void showToast(View view) {
         Context context = getApplicationContext();
         CharSequence text = getString(R.string.about_info);

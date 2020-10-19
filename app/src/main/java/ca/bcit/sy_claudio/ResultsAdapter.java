@@ -31,11 +31,9 @@ public class ResultsAdapter extends ArrayAdapter<Results> {
         }
 
         // Lookup view for data population
-//        TextView tvId = convertView.findViewById(R.id.id);
         TextView tvTitle = convertView.findViewById(R.id.title);
 
         // Populate the data into the template view using the data object
-//        tvId.setText(result.getId());
         tvTitle.setText(result.getTitle());
 
         tvTitle.setOnClickListener(new View.OnClickListener() {
@@ -43,6 +41,7 @@ public class ResultsAdapter extends ArrayAdapter<Results> {
             public void onClick(View view) {
                 Intent intent = new Intent(view.getContext(), ResultDataActivity.class);
 
+                // pass in string values of json to the intent
                 intent.putExtra("source", result.getSource().getName());
                 intent.putExtra("author", result.getAuthor());
                 intent.putExtra("title", result.getTitle());

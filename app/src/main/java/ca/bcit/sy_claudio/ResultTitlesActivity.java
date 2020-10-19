@@ -30,18 +30,22 @@ public class ResultTitlesActivity extends AppCompatActivity {
         setContentView(R.layout.activity_result_titles);
         getSupportActionBar().setTitle(Html.fromHtml("<font color=\"#595359\">" + getString(R.string.app_name) + "</font>"));
 
-
+        // get intent and the keyword user typed in
         Intent intent = getIntent();
         String searchInput = intent.getStringExtra("input");
+        // for testing and debugging purposes
         System.out.println(searchInput);
 
+        // set date (inserted in SERVICE_URL) to one week behind current time
         // Date code from https://stackoverflow.com/questions/11272431/get-date-of-past-7days-from-current-in-android
         final LocalDate date = LocalDate.now();
         final LocalDate dateMinus7Days = date.minusDays(7);
         final String formattedDate = dateMinus7Days.format(DateTimeFormatter.ISO_LOCAL_DATE);
         SERVICE_URL = "https://newsapi.org/v2/everything?q=" + searchInput + "&from=" + formattedDate + "&sortBy=publishedAt&apiKey=053d3857d0c44256b466b2e494de3d96";
+        // for testing and debugging purposes
         System.out.println(SERVICE_URL);
 
+        // instantiate arraylist and listview
         resultsList = new ArrayList<Results>();
         lv = findViewById(R.id.resultList);
         new GetResults().execute();
@@ -68,9 +72,6 @@ public class ResultTitlesActivity extends AppCompatActivity {
 
             if (jsonStr != null) {
                 Log.d(TAG, "Json: " + jsonStr);
-                // this step is needed to wrap the JSON array inside
-                // a JSON object that looks like this {"toons": .... }
-//                jsonStr = "{\"results\":" + jsonStr + "}";
                 Gson gson = new Gson();
                 BaseResults baseResults = gson.fromJson(jsonStr, BaseResults.class);
                 resultsList = baseResults.getResults();
